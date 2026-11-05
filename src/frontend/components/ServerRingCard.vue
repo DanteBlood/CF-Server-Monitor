@@ -105,7 +105,12 @@
       <div v-if="sysConfig.show_tf" class="server-card-limit-section">
         <div class="server-card-limit-header">
           <span>{{ trans.monthlyTraffic }}</span>
-          <span>{{ trafficLimitText }}<template v-if="trafficLimitSummary"> | {{ trafficLimitPercentText }}%</template></span>
+          <span>
+            {{ trafficLimitText }}
+            <template v-if="trafficLimitSummary"> | {{ trafficLimitPercentText }}%</template>
+            <span v-if="server.resetDay" style="color:#888;margin-left:6px;"> | 重置日{{ server.resetDay }}号</span>
+         </span>
+
         </div>
         <div class="server-card-limit-bar">
           <div v-if="trafficLimitSummary" class="server-card-limit-fill" :style="{ width: Math.min(100, trafficUsagePercent) + '%', background: getUsageColor(trafficUsagePercent) }"></div>
