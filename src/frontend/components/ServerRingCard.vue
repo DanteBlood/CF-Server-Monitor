@@ -108,7 +108,7 @@
           <span>
             {{ trafficLimitText }}
             <template v-if="trafficLimitSummary"> | {{ trafficLimitPercentText }}%</template>
-            <span v-if="server.resetDay" style="color:#888;margin-left:6px;"> | 重置日{{ server.resetDay }}号</span>
+            <span v-if="server.reset_day" style="color:#888;margin-left:6px;"> | 重置日{{server.reset_day}}号</span>
          </span>
 
         </div>
