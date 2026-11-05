@@ -97,7 +97,7 @@
         <span class="net-down">▼ {{ totalRxMonthly }}</span>
         <span class="net-up">▲ {{ totalTxMonthly }}</span>
         <span v-if="sysConfig.show_tf && server.traffic_limit" class="stat-limit">/ 📦 {{ formatBytes(server.traffic_limit * 1024 * 1024 * 1024) }}</span>
-        <span v-if="server.resetDay" class="stat-limit" style="color:#888;margin-left:6px;">| 重置日{{ server.resetDay }}日</span>
+        <span v-if="server.reset_Day" class="stat-limit" style="color:#888;margin-left:6px;">| 重置日{{ server.reset_Day }}号</span>
         </div>
       </div>
     </div>
