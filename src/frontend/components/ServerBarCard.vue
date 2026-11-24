@@ -106,6 +106,7 @@
       :show-three-net-details="sysConfig.show_three_net_details"
       :has-three-net-details="hasThreeNetDetails"
       :three-net-details="threeNetDetails"
+      :show-ping-fallback="threeNetPanelCount > 0"
       :has-ping-data="hasPingData"
       :ping-list="pingList"
       :timeout-text="trans.timeout"
@@ -171,6 +172,7 @@ const {
   hasPingData,
   threeNetDetails,
   hasThreeNetDetails,
+  threeNetPanelCount,
   getPublicAssetUrl,
   formatBytes
 } = useServerCardData(props)
